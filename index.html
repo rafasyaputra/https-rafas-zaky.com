@@ -1,181 +1,250 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Biografi dan portofolio pribadi.">
-  <title>Biografi | Dua Cerita</title>
-  <link rel="preconnect" href="https://rafas&zaky.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1b5635">
+  <meta name="description" content="Rencanakan pendakian Gunung Merbabu dengan lebih mudah. Pilih jalur, tanggal, dan lengkapi data rombongan.">
+  <title>Merbabu — Rencanakan Pendakianmu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="stley.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top site-navbar">
-    <div class="container">
-      <a class="navbar-brand" href="#beranda"><span class="brand-mark">N</span> nama<span class="brand-dot">.</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Buka navigasi">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-          <li class="nav-item"><a class="nav-link" href="#tentang">Data diri</a></li>
-          <li class="nav-item"><a class="nav-link" href="#perjalanan">Perjalanan</a></li>
-          <li class="nav-item"><a class="nav-link" href="#keahlian">Keahlian</a></li>
-          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-nav" href="#kontak">Hubungi kami <span aria-hidden="true">↗</span></a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <header class="site-header">
+    <a class="brand" href="#beranda" aria-label="Merbabu, ke beranda">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 36 36" fill="none"><path d="M3 28.5 13.2 11l5.2 8.4 3.2-5.3L33 28.5H3Z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><path d="m10.5 28.5 7-11.9 7.1 11.9" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><path d="m11.2 14.5 2-3.5 2.1 3.5" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+      </span>
+      <span>merbabu<span class="brand-dot">.</span></span>
+    </a>
+    <button class="menu-toggle navbar-toggler" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Buka menu">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navigasi utama">
+      <a href="#tentang">Tentang Merbabu</a>
+      <a href="#jalur">Jalur pendakian</a>
+      <a href="#panduan">Panduan</a>
+      <a class="nav-cta" href="#daftar">Mulai daftar <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
 
   <main>
-    <section class="hero-section" id="beranda">
-      <div class="container">
-        <div class="row align-items-center gy-5">
-          <div class="col-lg-7">
-            <div class="eyebrow"><span class="status-dot"></span> HALO, SENANG BERTEMU DENGANMU</div>
-            <h1>Dua pribadi,<br>dua cerita yang<br>terus <span class="serif-text">bertumbuh.</span></h1>
-            <p class="hero-copy">Selamat datang di halaman biografi kami. Yuk, kenali data diri, cerita, dan hal-hal yang kami sukai.</p>
-            <div class="d-flex flex-wrap gap-3 align-items-center">
-              <a class="btn btn-primary-custom" href="#tentang">Kenali kami <span aria-hidden="true">↓</span></a>
-              <a class="text-link" href="#perjalanan">Lihat perjalanan kami</a>
-            </div>
-            <div class="hero-meta">
-              <div><strong>01</strong><span>Orang pertama</span></div>
-              <div><strong>02</strong><span>Orang kedua</span></div>
-              <div><strong>03</strong><span>Satu halaman</span></div>
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <div class="portrait-wrap">
-              <div class="portrait-decoration decoration-one"></div>
-              <div class="portrait-decoration decoration-two"></div>
-              <div class="portrait-card">
-                <div class="portrait-top"><span>DUA CERITA</span><span>✳</span></div>
-                <div class="portrait-avatar" aria-label="Inisial dua orang">A+B</div>
-                <div class="portrait-caption">
-                  <span class="caption-label">KENALI KAMI</span>
-                  <h2>Dua pribadi,<br>banyak cerita.</h2>
-                  <span class="location">📍 Isi kota kalian</span>
-                </div>
-              </div>
-              <div class="floating-note"><span>✦</span> Masing-masing punya<br>cerita tersendiri</div>
-            </div>
+    <section class="hero" id="beranda">
+      <div class="hero-image" role="img" aria-label="Pemandangan pegunungan berkabut saat matahari terbit"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> JAWA TENGAH · 3.145 MDPL</p>
+        <h1>Temukan<br>jalanmu<em>Menuju puncak.</em></h1>
+        <p class="hero-copy">Satu langkah kecil menuju lautan awan, sabana luas, dan cerita yang akan kamu bawa pulang.</p>
+        <a href="#daftar" class="button button-light btn">Rencanakan pendakian <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-bottom">
+        <span class="hero-location"><span class="location-dot"></span> Taman Ngawi Ambarawa</span>
+        <span class="hero-scroll">GULIR UNTUK MENJELAJAH <span aria-hidden="true">↓</span></span>
+      </div>
+      <div class="hero-index" aria-hidden="true">07°27′ LS&nbsp; 110°26′ BT</div>
+    </section>
+
+    <section class="intro section-wrap" id="tentang">
+      <div class="section-label"><span>01</span> TENTANG MERBABU</div>
+      <div class="intro-copy">
+        <h2>Bukan sekadar<br>tentang <em>puncak.</em></h2>
+        <div class="intro-detail">
+          <p>Merbabu menyambutmu dengan padang sabana yang terbuka, punggung bukit yang berlapis, dan matahari terbit dari ketinggian. Perjalanan yang pantas dipersiapkan dengan baik.</p>
+          <div class="stats">
+            <div><strong>3.145<span>m</span></strong><small>KETINGGIAN PUNCAK</small></div>
+            <div><strong>5</strong><small>PILIHAN JALUR</small></div>
+            <div><strong>2–3</strong><small>HARI PERJALANAN</small></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-padding about-section" id="tentang">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">KENALI KAMI</span>
-          <h2>RAFA SYAPUTRA,<br><span class="serif-text">MUHAMMAD ZAKI MUKTADIR.</span></h2>
-        </div>
-        <p class="profiles-intro">Ganti teks contoh di bawah dengan informasi kalian. Ceritakan hal-hal yang nyaman untuk dibagikan.</p>
-        <div class="row g-4">
-          <div class="col-lg-6">
-            <article class="profile-card">
-              <div class="profile-card-header"><span class="profile-number">01</span><span class="profile-initials">A</span></div>
-              <span class="section-kicker">RAFA SYAPUTRA</span>
-              <h3>Nama RAFA SYAPUTRA</h3>
-              <p class="profile-bio"> Halo, perkenalkan nama saya Rafa Syaputra. Saya adalah seorang mahasiswa Teknik Informatika yang tertarik pada teknologi dan komputer. Saya ingin terus belajar, menambah pengalaman, dan mengembangkan kemampuan diri untuk meraih cita-cita di masa depan..</p>
-              <div class="profile-details">
-                <div><span>Nama lengkap</span><strong>RAFA SYAPUTRA</strong></div>
-                <div><span>Tempat, tanggal lahir</span><strong>JAKARTA 04 MARET 2007</strong></div>
-                <div><span>Pendidikan</span><strong>SMK TUNAS GERAFIKA INFORMATIKA</strong></div>
-                <div><span>Hobi</span><strong>BERMAIN SEPAK BOLA</strong></div>
-              </div>
-            </article>
+    <section class="routes-section" id="jalur">
+      <div class="section-wrap">
+        <div class="routes-heading">
+          <div>
+            <div class="section-label section-label-light"><span>02</span> PILIH PERJALANANMU</div>
+            <h2>Lima jalur,<br><em>satu Merbabu.</em></h2>
           </div>
-          <div class="col-lg-6">
-            <article class="profile-card">
-              <div class="profile-card-header"><span class="profile-number">02</span><span class="profile-initials">B</span></div>
-              <span class="section-kicker">MUHAMAD ZAKI MUKTADIR</span>
-              <h3>MUHAMAD ZAKI MUKTADIR</h3>
-              <p class="profile-bio">Tuliskan perkenalan singkat, minat, atau cita-cita orang kedua di sini.</p>
-              <div class="profile-details">
-                <div><span>Nama lengkap</span><strong></strong>MUHAMAD ZAKI MUKTADIR</div>
-                <div><span>Tempat, tanggal lahir</span><strong>BOMBONAWULU 09 MARET  2008</strong></div>
-                <div><span>Pendidikan</span><strong>SMA MUHAMMADIYAH DARUL ARQOM</strong></div>
-                <div><span>Hobi</span><strong>BERMAIN BOLA</strong></div>
-              </div>
-            </article>
-          </div>
+          <p>Setiap jalur punya karakternya sendiri. Kenali medan dan pilih perjalanan yang paling sesuai dengan persiapanmu.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="section-padding journey-section" id="perjalanan">
-      <div class="container">
-        <div class="section-heading d-flex flex-wrap justify-content-between align-items-end gap-3">
-          <div><span class="section-kicker">LANGKAH DEMI LANGKAH</span><h2>Perjalanan <span class="serif-text">kami.</span></h2></div>
-          <p class="heading-note">Setiap pengalaman punya cerita<br>dan pelajaran tersendiri.</p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <span class="timeline-year">2026 — SEKARANG</span>
-            <div><h3>Menempuh pendidikan</h3><p>RAFA SYAPUTRA<strong>TANTRI ABENG UNIVERSITY</strong>,MUHAMAD ZAKI MUKTADIR <strong>TANTRI ABENG UNIVERSITY</strong>.</p></div>
-            <span class="timeline-number">01</span>
+        <div class="route-grid">
+          <article class="route-card route-card-featured">
+            <div class="route-number">01 / FAVORIT</div>
+            <h3>Selo</h3>
+            <p>Jalur populer dengan sabana ikonik dan pemandangan gunung yang terbuka.</p>
+            <div class="route-meta"><span>± 6–8 JAM</span><span>MENANTANG</span></div>
+            <a href="#daftar" class="route-arrow" aria-label="Pilih jalur Selo">↗</a>
           </article>
-          <article class="timeline-item">
-            <span class="timeline-year">2023 — 2026</span>
-            <div><h3>Mulai mengeksplorasi minat</h3><p>Mencoba berbagai kegiatan, menemukan hal-hal yang membuat kami bersemangat, dan belajar bekerja sama.</p></div>
-            <span class="timeline-number">02</span>
+          <article class="route-card">
+            <div class="route-number">02 / MAGELANG</div>
+            <h3>Suwanting</h3>
+            <p>Tanjakan menantang yang terbayar dengan bentang sabana yang luas.</p>
+            <div class="route-meta"><span>± 7–9 JAM</span><span>MENANTANG</span></div>
+            <a href="#daftar" class="route-arrow" aria-label="Pilih jalur Suwanting">↗</a>
           </article>
-          <article class="timeline-item">
-            <span class="timeline-year">SEBELUMNYA</span>
-            <div><h3>Awal dari semuanya</h3><p>Tumbuh dengan rasa ingin tahu dan dukungan keluarga untuk terus belajar serta berani mencoba.</p></div>
-            <span class="timeline-number">03</span>
+          <article class="route-card">
+            <div class="route-number">03 / BOYOLALI</div>
+            <h3>Wekas</h3>
+            <p>Jalur dengan sumber air dan area berkemah yang dikenal para pendaki.</p>
+            <div class="route-meta"><span>± 6–8 JAM</span><span>MENENGAH</span></div>
+            <a href="#daftar" class="route-arrow" aria-label="Pilih jalur Wekas">↗</a>
+          </article>
+          <article class="route-card">
+            <div class="route-number">04 / SEMARANG</div>
+            <h3>Thekelan</h3>
+            <p>Lintasan klasik dengan beberapa puncak dan panorama pegunungan.</p>
+            <div class="route-meta"><span>± 7–9 JAM</span><span>MENANTANG</span></div>
+            <a href="#daftar" class="route-arrow" aria-label="Pilih jalur Thekelan">↗</a>
+          </article>
+          <article class="route-card">
+            <div class="route-number">05 / MAGELANG</div>
+            <h3> Cuntel</h3>
+            <p>Suasana hutan yang teduh sebelum tiba di area punggungan terbuka.</p>
+            <div class="route-meta"><span>± 6–8 JAM</span><span>MENENGAH</span></div>
+            <a href="#daftar" class="route-arrow" aria-label="Pilih jalur Cuntel">↗</a>
           </article>
         </div>
+        <p class="route-note">Estimasi waktu dan kondisi jalur dapat berubah. Pastikan mengecek informasi terbaru dari pengelola taman nasional sebelum berangkat.</p>
       </div>
     </section>
 
-    <section class="section-padding skills-section" id="keahlian">
-      <div class="container">
-        <div class="row gy-5">
-          <div class="col-lg-5">
-            <span class="section-kicker">YANG SAYA SUKAI</span>
-            <h2>Hal-hal yang<br><span class="serif-text">kami sukai.</span></h2>
-            <p class="body-copy mt-4">Kami terus belajar dan terbuka untuk pengalaman baru. Beberapa hal yang kami sukai:</p>
-          </div>
-          <div class="col-lg-6 offset-lg-1">
-            <div class="skill-list">
-              <div class="skill-row"><span class="skill-icon">✳</span><div><h3>Komunikasi</h3><p>Mendengarkan, berbagi ide, dan bekerja bersama.</p></div><span class="skill-index">01</span></div>
-              <div class="skill-row"><span class="skill-icon">⌘</span><div><h3>Kreativitas</h3><p>Mencari cara baru untuk menyelesaikan masalah.</p></div><span class="skill-index">02</span></div>
-              <div class="skill-row"><span class="skill-icon">↗</span><div><h3>Teknologi</h3><p>Mengenal dunia digital dan terus belajar hal baru.</p></div><span class="skill-index">03</span></div>
-              <div class="skill-row"><span class="skill-icon">♡</span><div><h3>Kolaborasi</h3><p>Bertumbuh bersama dan saling mendukung.</p></div><span class="skill-index">04</span></div>
-            </div>
-          </div>
+    <section class="register-section section-wrap" id="daftar">
+      <div class="register-aside">
+        <div class="section-label"><span>03</span> MULAI PERJALANAN</div>
+        <h2>Pendaftaran<br>Gunung<em>Merbabu.</em></h2>
+        <p>Isi rencana pendakianmu. Pastikan data sesuai identitas dan periksa kembali sebelum melanjutkan.</p>
+        <div class="notice-card">
+          <span class="notice-icon" aria-hidden="true">i</span>
+          <p><strong>Persiapan itu penting.</strong><br>Pastikan seluruh anggota rombongan dalam kondisi sehat dan membawa perlengkapan sesuai cuaca.</p>
+        </div>
+        <div class="form-steps" aria-label="Tahapan pendaftaran">
+          <span class="step-active"><i>1</i> Data pendakian</span>
+          <span><i>2</i> Data ketua rombongan</span>
+          <span><i>3</i> Konfirmasi</span>
         </div>
       </div>
+
+      <form class="registration-form" id="registration-form">
+        <div class="form-heading">
+          <div>
+            <span class="form-kicker">FORMULIR RENCANA PENDAKIAN</span>
+            <h3>Atur perjalananmu</h3>
+          </div>
+          <span class="required-note"><b>*</b> Wajib diisi</span>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            <span>Jalur pendakian <b>*</b></span>
+            <select class="form-select" name="route" required>
+              <option value="" disabled selected>Pilih jalur</option>
+              <option value="Selo">Selo</option>
+              <option value="Suwanting">Suwanting</option>
+              <option value="Wekas">Wekas</option>
+              <option value="Thekelan">Thekelan</option>
+              <option value="Cuntel">Cuntel</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Tanggal mulai <b>*</b></span>
+            <input class="form-control" type="date" name="date" required>
+          </label>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            <span>Jumlah pendaki <b>*</b></span>
+            <select class="form-select" name="hikers" required>
+              <option value="" disabled selected>Pilih jumlah orang</option>
+              <option value="1">1 orang</option>
+              <option value="2">2 orang</option>
+              <option value="3">3 orang</option>
+              <option value="4">4 orang</option>
+              <option value="5">5 orang</option>
+              <option value="6">6 orang</option>
+              <option value="7">7 orang</option>
+              <option value="8">8 orang</option>
+              <option value="9">9 orang</option>
+              <option value="10">10 orang</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Nama ketua rombongan <b>*</b></span>
+            <input class="form-control" type="text" name="leader" placeholder="Sesuai kartu identitas" autocomplete="name" required minlength="2">
+          </label>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            <span>Email aktif <b>*</b></span>
+            <input class="form-control" type="email" name="email" placeholder="nama@email.com" autocomplete="email" required>
+          </label>
+          <label class="field">
+            <span>Nomor WhatsApp <b>*</b></span>
+            <input class="form-control" type="tel" name="phone" placeholder="08xxxxxxxxxx" autocomplete="tel" inputmode="tel" required pattern="\+?[0-9]{8,14}" title="Masukkan 8–14 digit nomor telepon, dengan awalan + opsional.">
+          </label>
+        </div>
+        <label class="consent">
+          <input type="checkbox" name="agreement" required>
+          <span>Saya memastikan informasi yang diisi benar dan bersedia mengikuti peraturan serta menjaga kelestarian Taman Nasional Gunung Merbabu.</span>
+        </label>
+        <button type="submit" class="button button-dark btn btn-success">Lihat ringkasan rencana <span aria-hidden="true">↗</span></button>
+        <p class="form-disclaimer">Demo antarmuka. Formulir ini belum mengirim atau menyimpan data pendaftaran resmi.</p>
+        <div class="form-message" id="form-message" role="status" aria-live="polite"></div>
+      </form>
     </section>
 
-    <section class="contact-section" id="kontak">
-      <div class="container">
-        <div class="contact-card">
-          <span class="section-kicker">SAPA SAYA</span>
-          <h2>Punya cerita untuk<br><span class="serif-text">dibagikan?</span></h2>
-          <p>Kami senang berkenalan dan bertukar cerita. Jangan ragu untuk menyapa!</p>
-          <a class="btn btn-light-custom" href="mailto:RAFA.SAPUTRA@STUDENT.TAU.AC.ID">RAFA.SAPUTRA@STUDENT.TAU.AC.ID <span aria-hidden="true">↗</span></a>
-          <div class="contact-sparkle" aria-hidden="true">✳</div>
+    <section class="guide-section" id="panduan">
+      <div class="section-wrap guide-inner">
+        <div class="section-label section-label-light"><span>04</span> SEBELUM BERANGKAT</div>
+        <h2>Gunung yang baik<br>adalah gunung yang <em>dijaga.</em></h2>
+        <div class="guide-items">
+          <div><span>01</span><p>Cek kondisi fisik dan persiapkan perlengkapan sesuai kebutuhan.</p></div>
+          <div><span>02</span><p>Bawa kembali sampahmu. Jangan tinggalkan apa pun di gunung.</p></div>
+          <div><span>03</span><p>Ikuti arahan petugas dan tetap berada di jalur pendakian.</p></div>
         </div>
+        <p class="official-note">Informasi jadwal, kuota, tarif, dan ketentuan resmi dapat berubah. Konfirmasi langsung melalui Instagram @MHDDZ4KY  sebelum melakukan perjalanan atau pendakian.</p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
-      <a class="footer-brand" href="#beranda">nama<span>.</span></a>
-      <p class="mb-0">Dibuat dengan semangat dan secangkir kopi. © <span id="currentYear"></span></p>
-      <a class="back-top" href="#beranda">Kembali ke atas ↑</a>
+  <footer class="site-footer" id="kontak">
+    <div class="footer-branding">
+      <a class="brand brand-footer" href="#beranda">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none"><path d="M3 28.5 13.2 11l5.2 8.4 3.2-5.3L33 28.5H3Z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><path d="m10.5 28.5 7-11.9 7.1 11.9" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><path d="m11.2 14.5 2-3.5 2.1 3.5" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </span>
+        <span>merbabu<span class="brand-dot">.</span></span>
+      </a>
+      <p>Langkahmu, ceritamu. Jaga Merbabu selalu.</p>
     </div>
+    <div class="footer-contact">
+      <h2>Hubungi kami</h2>
+      <a href="https://wa.me/6285150742380" target="_blank" rel="noopener noreferrer">
+        <span>WhatsApp</span><strong>+62 851-5074-2380</strong><span class="contact-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="mailto:muh.zakimuktadir@student.tau.ac.id">
+        <span>Email</span><strong>muh.zakimuktadir@student.tau.ac.id</strong><span class="contact-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="https://www.instagram.com/mhddz4ky/" target="_blank" rel="noopener noreferrer">
+        <span>Instagram</span><strong>@mhddz4ky</strong><span class="contact-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <span class="copyright">RAFA SYAPUTRA & MUHAMAD ZAKI MUKTADIR WEBSITE</span>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  <dialog class="summary-dialog" id="summary-dialog" aria-labelledby="dialog-title">
+    <button type="button" class="dialog-close" aria-label="Tutup ringkasan">×</button>
+    <span class="form-kicker">RINGKASAN RENCANA</span>
+    <h2 id="dialog-title">Siap untuk <em>melangkah?</em></h2>
+    <p class="dialog-intro">Periksa kembali detail rencana pendakianmu.</p>
+    <dl class="summary-list" id="summary-list"></dl>
+    <p class="dialog-warning">Ini hanya konfirmasi tampilan WEBSITE. Data tidak dikirim dan belum menjadi pendaftaran resmi.</p>
+    <button type="button" class="button button-dark btn btn-success dialog-done">Mengerti</button>
+  </dialog>
 </body>
 </html>
